@@ -1,12 +1,51 @@
-// const h1 = document.createElement("h1")
-// h1.textContent = "Hello world"
-// h1.className = "header"
-// console.log(h1)
+import React from "react"
+import ReactDOM from "react-dom"
 
-const page = (
-    <div>
-        <h1 className="header">This is JSX</h1>
-        <p>This is a paragraph</p>
-    </div>
-)
-ReactDOM.render(page, document.getElementById("root"))
+function MainContent() {
+    return (
+        <div>
+            <h1>I am a bold h1 text</h1>
+            <ol>
+                <li>One</li>
+                <li>Two</li>
+                <li>Three</li>
+                <li>Four</li>
+            </ol>
+        </div>
+    )
+}
+
+function Footer() {
+    return (
+        <footer>
+            <small>c All rights reserved lool</small>
+        </footer>
+    )
+}
+
+function Header() {
+    return (
+        <header>
+            <nav className="nav">
+                <img src="./React-icon.png" className="nav-logo"/>
+                <ul className="nav-items">
+                    <li>Pricing</li>
+                    <li>About</li>
+                    <li>Contact</li>
+                </ul>
+            </nav>
+        </header>
+    ) 
+}
+
+function Page() {
+    return (
+        <div>
+            <Header />
+            <MainContent />
+            <Footer />
+        </div>
+    )
+}
+
+ReactDOM.render(<Page />, document.getElementById("root"))
