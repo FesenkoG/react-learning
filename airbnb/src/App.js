@@ -14,13 +14,8 @@ export default function App() {
     const cards = data.map(object => {
         return (
             <Card
-                img={object.coverImg}
-                rating={object.stats.rating}
-                reviewCount={object.stats.reviewCount}
-                country={object.location}
-                title={object.title}
-                price={object.price}
-                openSpots={object.openSpots}
+                key={object.id}
+                item={object}
             />
         )
     })
